@@ -9,19 +9,18 @@ on:
       - main
   workflow_dispatch:
 
-  jobs:
-      hello:
-        runs-on: ubuntu-latest
-        steps:
-          - uses: actions/checkout@v2
-          - name: Hello world
-            run: echo "hello wrold"
-            shell: bash
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Hello world
+        run: echo "hello world"
+        shell: bash
 
-    goodby:
-      runs-on: ubuntu-latest
-      steps:
-        - name: good by
-          run: echo "good by friends"
-          shell: bash  
-
+  goodby:
+    runs-on: ubuntu-latest
+    steps:
+      - name: good by
+        run: echo "good by friends"
+        shell: bash
